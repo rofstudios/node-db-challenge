@@ -11,9 +11,9 @@ module.exports = {
     migrations: {
       directory: './data/migrations'
     },
-    // seeds: {
-    //   filename: './data/seeds'
-    // }
+    seeds: {
+      filename: './data/seeds'
+    }
   },
 
   // staging: {
