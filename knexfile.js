@@ -12,8 +12,13 @@ module.exports = {
       directory: './data/migrations'
     },
     seeds: {
-      filename: './data/seeds'
-    }
+      directory: './data/seeds'
+    },
+    pool: {
+      afterCreate: (a, b) => {
+        a.run('PRAGMA foreign_keys = ON', b); // turn on FK enforcement
+      },
+    },
   },
 
   // staging: {
